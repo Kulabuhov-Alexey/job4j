@@ -1,8 +1,8 @@
 /**
-* Package for calculator task.
+* Package for calculator and weight task.
 *
 * @author Alexey Kulabuhov (mailto:jkulabuha@yandex.ru)
-* @version 1.0
-* @since 30.08.2018
+* @version 2.0
+* @since 01.09.2018
 */
 package ru.job4j.calculator;

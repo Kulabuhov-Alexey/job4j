@@ -19,4 +19,11 @@ public class MaxTest {
         int result = maxim.max(33, 11);
         assertThat(result, is(33));
     }
+
+    @Test
+    public void whenSecondBiggerFirstAndThird() {
+        Max maxim = new Max();
+        int result = maxim.max(33, 66, 44);
+        assertThat(result, is(66));
+    }
 }

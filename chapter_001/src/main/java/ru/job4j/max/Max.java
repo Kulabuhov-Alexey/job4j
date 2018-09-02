@@ -20,8 +20,6 @@ public class Max {
      * @return максимум из 3-х чисел.
      */
     public int max(int first, int second, int third) {
-        int temp = max(first, second);
-        temp = max(temp, third);
-        return temp;
+        return max(max(first, second), third);
     }
 }

@@ -2,10 +2,33 @@ package ru.job4j.loop;
 
 import java.util.function.BiPredicate;
 /**
- * Рисуем пирамиду. V2.0 С рефакторингом кода.
+ * Рисуем пирамиду. V3.0 С рефакторингом кода и добавленными методами левого и правого треугольника.
  */
 public class Paint {
-
+    /**
+     *
+     * @param height высота "правого" треугольника.
+     * @return выводим треугольник
+     */
+    public String rightTrl(int height) {
+        return this.loopBy(
+                height,
+                height,
+                (row, column) -> row >= column
+        );
+    }
+    /**
+     *
+     * @param height высота "левого" треугольника.
+     * @return выводим треугольник
+     */
+    public String leftTrl(int height) {
+        return this.loopBy(
+                height,
+                height,
+                (row, column) -> row >= height - column - 1
+        );
+    }
     public String pyramid(int height) {
         return this.loopBy(
                 height,

@@ -6,19 +6,16 @@ public class MatrixCheck {
     /**
      *
      * @param data матрица для проверки диагоналей.
-     * @return заполнена ли хотябы одна диагональ одинаковыми элементами.
+     * @return все диагонали содержат одинаковые элементы.
      */
     public boolean mono(boolean[][] data) {
         boolean result = true;
-        boolean result2 = true;
-        for (int i = 1; i < data.length; i++) {
-            if (data[0][0] != data[i][i]) {
+        boolean tmp = data[0][0];
+        for (int i = 0; i < data.length; i++) {
+            if ((tmp != data[i][i]) ||  (tmp != data[data.length - 1 - i][i])) {
                 result = false;
             }
-            if (data[0][data.length - 1] != data[i][data.length - i - 1]) {
-                result2 = false;
-            }
         }
-        return result || result2;
+        return result;
     }
 }
